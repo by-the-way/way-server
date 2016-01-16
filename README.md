@@ -4,18 +4,28 @@
 
     请求时机：用户首次启动app时
 
-    发送数据：{"register":ios-device-id,"uid":"xxxxxx"}
+    发送数据：{"uid":"xxxxxx"}
 
-    返回数据：{"ret":"ok/error"} 失败或者超时后重新发送
-
-demo: 192.168.10.251:8001/user?json={"register":ios-device-id,"uid":"xxxxxx"}
+    返回数据：{"status":0,"message":"xxxx"} 0:succeed, !=0: 失败
+    
+    demo: 192.168.10.251:8001/user_register?json={"uid":"xxxxxx"}
 
 接口2：设置用户资料
 
     请求时机：首次启动是选择个人标签，或者通过设置页面修改个人资料
 
-    发送数据：{"id":"[userid]","gender":"女","tag":"[技术，漂亮]","icon":"binary","icon":"xxx","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}, id是必须的，其它可选
+    发送数据：{"uid":"[userid]","gender":"女","tag":"[技术，漂亮]","icon":"binary","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}, uid是必须的，其它可选
 
     返回数据：{"ret":"ok/error"} 失败或者超时后重新发送
 
-demo: 192.168.10.251:8001/user?json={"event":"profile"，"id":"[userid]","gender":"女","tag":"[技术，漂亮]","icon":"binary","icon":"xxx","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}
+    demo: 192.168.10.251:8001/user_profile?json={"uid":"[userid]","gender":"女","tag":"[技术，漂亮]","icon":"binary","icon":"xxx","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}
+
+接口3：推送(拉取)标签
+
+    推送时机：用户正乘坐uber去某个热门位置
+    (拉取接口：{"uid":"xxx"}, 192.168.10.251:8001/event_label?json={"uid":"[userid]"})
+    推送/返回数据：{label1:"中午一起吃饭",label2:"下午玩桌游"....}
+    
+    
+    
+    
