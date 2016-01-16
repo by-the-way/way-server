@@ -1,9 +1,9 @@
 # uber_server
 
-接口1：用户首次启动app自动注册为用户
+锟接匡拷1锟斤拷锟矫伙拷锟阶达拷锟斤拷锟斤拷app锟皆讹拷注锟斤拷为锟矫伙拷
 
-      请求时机：用户首次启动app时
+      锟斤拷锟斤拷时锟斤拷锟斤拷锟矫伙拷锟阶达拷锟斤拷锟斤拷app时
 
-      发送数据：{"register":ios-device-id,"uid":"xxxxxx"}
+      锟斤拷锟斤拷锟斤拷锟捷ｏ拷{"register":ios-device-id,"uid":"xxxxxx"}
 
-      返回数据：{"ret":"ok/error"} 失败或者超时后重新发送
+      锟斤拷锟斤拷锟斤拷锟捷ｏ拷{"ret":"ok/error"} 失锟杰伙拷锟竭筹拷时锟斤拷锟斤拷锟铰凤拷锟斤拷
