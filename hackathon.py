@@ -217,7 +217,23 @@ def me():
         endpoint='me',
         data=response.text,
     )
+    
+@app.route('/current', methods=['GET'])
+def current():
+    """Return user information including name, picture and email."""
+    url = config.get('base_uber_url') + 'requests/current'
+    response = app.requests_session.get(
+        url,
+        headers=generate_ride_headers(session.get('access_token')),
+    )
 
+    if response.status_code != 200:
+        return 'There was an error', response.status_code
+    return render_template(
+        'results.html',
+        endpoint='current',
+        data=response.text,
+    )
 
 def get_redirect_uri(request):
     """Return OAuth redirect URI."""

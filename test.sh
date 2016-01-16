@@ -1,3 +1,5 @@
-export UBER_CLIENT_ID="mey9LOxdwtp2hqFXuNBCLmu5CsC1ncBu" && export UBER_CLIENT_SECRET="SX0q9y9TTri2JdUKVnUWpfuZ7BvnQOjmMosqJsKp"
-
+export UBER_CLIENT_ID="mey9LOxdwtp2hqFXuNBCLmu5CsC1ncBu"
+export UBER_CLIENT_SECRET="SX0q9y9TTri2JdUKVnUWpfuZ7BvnQOjmMosqJsKp"
+#export UBER_CLIENT_ID="EcUkura2QzF4FpPunqoplK1BzYVUNLGt"
+#export UBER_CLIENT_SECRET="HLZMGwlOa_bnxMV94YEe9nnQO2F4OdtNZQNHITcK"
 pip install -r requirements.txt
