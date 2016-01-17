@@ -39,8 +39,20 @@
     
     (拉取接口：{"uid":"xxx"}, 192.168.10.115:8001/event_label?json={"uid":"[userid]"})
     
-    返回数据,data的内容：[{"label_id":"1","label_content":"玩桌游"},{"label_id":"2","label_content":"k歌"}]
-    + start_location:, end_location, arrival_time
+    返回数据格式:
+    {'data': {'arrival_time': '2016-01-01 13-00-00',
+              'end_location': '中关村',
+              'labels': [{'label_content': '吃饭', 'label_id': 0},
+                         {'label_content': '电影', 'label_id': 1},
+                         {'label_content': '桌游', 'label_id': 2},
+                         {'label_content': 'k歌', 'label_id': 3},
+                         {'label_content': '酒吧', 'label_id': 4},
+                         {'label_content': 'k歌', 'label_id': 1263}
+                        ],
+              'start_location': '牡丹园'},
+   'message': '获取标签成功',
+   'status': 0}
+    
     demo: 192.168.10.115:8001/event_label?json={"uid":"[userid]"
     
 接口4：用户对某个标签感兴趣
