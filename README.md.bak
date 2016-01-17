@@ -17,11 +17,11 @@
 
     请求时机：用户首次启动app时
 
-    发送数据：{"uid":"xxxxxx"}
+    发送数据：uid=xxxxxx
 
     返回数据：{"status":0,"message":"xxxx"} 0:succeed, !=0: 失败
     
-    demo: 192.168.10.115:8001/user_register?json={"uid":"xxxxxx"}
+    demo: 192.168.10.115:8001/user_register?uid=xxxxxx
 
 接口2：设置用户资料
 
@@ -31,7 +31,7 @@
 
     返回数据：默认格式
 
-    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"binary","icon_url":"xxx","uber_id":"xxx","uber_secret":"xxxx","password":"xxxx"}
+    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"xxx","uber_id":"xxx","uber_secret":"xxxx","password":"xxxx"}
 
 接口3：推送(拉取)标签
 
@@ -39,7 +39,7 @@
     
     (拉取接口：{"uid":"xxx"}, 192.168.10.115:8001/event_label?json={"uid":"[userid]"})
     
-    返回数据,data的内容：{"label_id":"一起吃饭","label_id":"玩桌游",....} 
+    返回数据,data的内容：[{"label_id":"1","label_content":"玩桌游"},{"label_id":"2","label_content":"k歌"}]
     
     demo: 192.168.10.115:8001/event_label?json={"uid":"[userid]"
     
