@@ -7,7 +7,7 @@
         message:"xxxxx"
         data:"{
             uid:"xxx"
-            icon:"xxx"
+            icon_url:"xxx"
             .....
             .....
         }"
@@ -27,11 +27,11 @@
 
     请求时机：首次启动时选择个人标签，或者通过设置页面修改个人资料
 
-    发送数据：{"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon":"binary","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}, uid是必须的，其它可选
+    发送数据：{"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"binary","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}, uid是必须的，其它可选
 
     返回数据：默认格式
 
-    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon":"binary","icon":"xxx","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}
+    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"binary","icon_url":"xxx","uber_id":"xxx","uber_key":"xxxx","password":"xxxx"}
 
 接口3：推送(拉取)标签
 
@@ -60,9 +60,9 @@
     
     请求数据：{"uid":"xxx"}
     
-    返回数据：{"users":[{"uid":"xxx","icon":"xxx","tag":"xxx","gender":"xxx"},{"uid":"xxx","icon":"xxx","tag":"xxx","gender":"xxx"}]} 
+    返回数据：{"users":[{"uid":"xxx","icon_url":"xxx","tag":"xxx","gender":"xxx"},{"uid":"xxx","icon_url":"xxx","tag":"xxx","gender":"xxx"}]} 
     
-    demo: 192.168.10.115:8001/same_user?json={"users":[{"uid":"xxx","icon":"xxx","tag":"xxx","gender":"xxx"},{"uid":"xxx","icon":"xxx","tag":"xxx","gender":"xxx"}]}
+    demo: 192.168.10.115:8001/same_user?json={"users":[{"uid":"xxx","icon_url":"xxx","tag":"xxx","gender":"xxx"},{"uid":"xxx","icon_url":"xxx","tag":"xxx","gender":"xxx"}]}
 
     
     
