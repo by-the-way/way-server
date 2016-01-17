@@ -31,7 +31,7 @@
 
     返回数据：默认格式
 
-    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"binary","icon_url":"xxx","uber_id":"xxx","uber_secret":"xxxx","password":"xxxx"}
+    demo: 192.168.10.115:8001/user_profile?json={"uid":"[userid]","gender":"男：1，女：0","tag":"[技术，漂亮]","icon_url":"xxx","uber_id":"xxx","uber_secret":"xxxx","password":"xxxx"}
 
 接口3：推送(拉取)标签
 
